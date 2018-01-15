@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stas.rustal.OrderActivity.OrderActivity">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/scrollview_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rate_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:theme="@style/RatingBar" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                app:layout_constraintEnd_toEndOf="@+id/order_main_id"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/order_main_id"
+                app:layout_constraintTop_toBottomOf="@+id/order_main_id">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/change_status_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Изменить статус" />
+
+            <com.example.stas.rustal.OrderActivity.MyMapview
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+                app:layout_constraintStart_toStartOf="@+id/scrollView2"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/image_upload_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/dl"
+                    android:textColor="#86a41e"
+                    app:layout_constraintBottom_toBottomOf="@+id/setted_image"
+                    app:layout_constraintEnd_toStartOf="@+id/setted_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/setted_image"
+                    app:layout_constraintVertical_bias="0.85"
+                    tools:ignore="NotSibling" />
+
+                <Button
+                    android:id="@+id/image_load_button"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/pick_image"
+                    android:textColor="#86a41e"
+                    app:layout_constraintBottom_toBottomOf="@+id/setted_image"
+                    app:layout_constraintEnd_toStartOf="@+id/setted_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/setted_image"
+                    app:layout_constraintVertical_bias="0.19999999" />
+
+                <ImageView
+                    android:id="@+id/setted_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    android:background="#3F51B5"
+                    android:clickable="true"
+                    android:cropToPadding="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/photo_default_source" />
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

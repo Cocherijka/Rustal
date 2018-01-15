@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Rustal</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <string name="saved_token">current_token</string>
+    <string name="dl">Загрузить</string>
+    <string name="pick_image">Выбрать изображение</string>
+</resources>
