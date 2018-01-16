@@ -23,7 +23,7 @@
         android:fullBackupContent="@xml/backup_descriptor"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBYdXcchQJ4qd_6CiBXWrx-3sr4AdV61Mg"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value=""/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

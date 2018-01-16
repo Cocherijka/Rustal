@@ -416,7 +416,7 @@ public class OrderActivity extends AppCompatActivity implements OnMapReadyCallba
         recyclerView.setAdapter(adapter);
 
         GeoApiContext context = new GeoApiContext.Builder()
-                .apiKey("AIzaSyBYdXcchQJ4qd_6CiBXWrx-3sr4AdV61Mg")
+                .apiKey("")
                 .build();
         try {
             result = DirectionsApi.newRequest(context).mode(TravelMode.DRIVING).origin(response.getAddressLoading().getVALUE()).destination(response.getAddress().getVALUE()).language("ru").await();

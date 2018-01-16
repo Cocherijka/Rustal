@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TestFairy.begin(this, "f5e75280c04fc7ae44af36f6c8d122b5b2c24629");
+        TestFairy.begin(this, "");
 
         toast = new Toast(this);
         intent = new Intent(this, OrderListActivity.class);
